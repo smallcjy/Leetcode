@@ -78,5 +78,9 @@
   },
   "key": "ctrl+alt+d",
   "command": "rust-analyzer.openDocs",
-  "when": "inRustProject"
+  "when": "inRustProject",
+  "files.associations": {
+    "*.tcc": "cpp",
+    "deque": "cpp"
+  }
 }

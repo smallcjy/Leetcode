@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=142 lang=cpp
+ * @lc app=leetcode.cn id=141 lang=cpp
  * @lcpr version=30204
  *
- * [142] 环形链表 II
+ * [141] 环形链表
  */
 
 
@@ -25,29 +25,27 @@ using namespace std;
 #include <vector>
 // @lcpr-template-end
 // @lc code=start
-
-// struct ListNode {
-//      int val;
-//      ListNode *next;
-//      ListNode(int x) : val(x), next(NULL) {}
-// };
- 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    ListNode *detectCycle(ListNode *head) {
-        ListNode *fast = head;
-        ListNode *slow = head;
+    bool hasCycle(ListNode *head) {
+        //建立一个当前已访问节点的hash
+        map<ListNode*,int>nodes;
+        ListNode* cur=head;
+        if(cur==nullptr)return false;
         do{
-            if(fast == nullptr|| fast->next == nullptr) return nullptr;
-            fast = fast->next->next;
-            slow = slow->next;
-        }while(fast != slow);
-        fast = head;
-        while(fast != slow){    
-            fast = fast->next;
-            slow = slow->next;
-        }
-        return fast;
+            nodes[cur]=1;
+            cur = cur->next;
+            if(cur==nullptr)return false;
+            if(nodes.find(cur)!=nodes.end())return true;
+        }while(true);
     }
 };
 // @lc code=end

@@ -70,6 +70,9 @@ public:
 
 };
 
+//总结：对于map的使用，一般不独立使用，而是和另外一个数据结构一起使用，使得查找该结构的时间复杂度为1
+//List标准库的使用：splice（pos，list，it）把it迭代器指向的元素不复制的放置到list的pos位置上
+
 /**
  * Your LRUCache object will be instantiated and called as such:
  * LRUCache* obj = new LRUCache(capacity);
