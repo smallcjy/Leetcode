@@ -81,6 +81,7 @@
   "when": "inRustProject",
   "files.associations": {
     "*.tcc": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "utility": "cpp"
   }
 }

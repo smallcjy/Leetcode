@@ -1,1 +1,4 @@
 target/
+.vscode/
+./Leetcode_cpp/.lcpr_data/
+./Leetcode_cpp/.vscode/
