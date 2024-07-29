@@ -63,10 +63,8 @@ public:
         int pos = i - n;
         if(pos == 0) {
            head = head->next;
-        }else if(pos == i) {
-           ListNode* node = map.at(pos);
-           node->next = nullptr;
-        }else {
+        }
+        else {
             ListNode* node = map.at(pos);
             node->next = node->next->next;
         }
