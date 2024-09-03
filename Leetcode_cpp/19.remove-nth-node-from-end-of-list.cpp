@@ -47,7 +47,7 @@ using namespace std;
 class Solution
 {
 public:
-//指针列表的删除需要单独考虑删除头指针和尾指针
+//指针列表的删除需要单独考虑删除头指针
     ListNode *removeNthFromEnd(ListNode *head, int n)
     {
         unordered_map<int, ListNode*> map;
