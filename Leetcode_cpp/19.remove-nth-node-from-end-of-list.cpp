@@ -48,6 +48,7 @@ class Solution
 {
 public:
 //指针列表的删除需要单独考虑删除头指针
+//或者添加哑节点，这样就不用对头指针进行去区分的考虑了
     ListNode *removeNthFromEnd(ListNode *head, int n)
     {
         unordered_map<int, ListNode*> map;
