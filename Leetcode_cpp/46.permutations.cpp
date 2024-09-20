@@ -28,34 +28,32 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-        // 全排列问题，使用回溯。
         vector<vector<int>> ans;
-        vector<int> vfs(nums.size(), 0);
         vector<int> temp;
-        n = nums.size();
-        permuteNums(0, vfs, nums, temp, ans);
+        vector<bool> used(nums.size(), false);
+        backtrack(nums, temp, used, ans);
         return ans;
-        
     }
 
-    void permuteNums(int first, vector<int>& vfs, vector<int>& nums, vector<int> temp, vector<vector<int>>& ans) {
-        if(first == n) {
+private:
+    void backtrack(vector<int>& nums, vector<int>& temp, vector<bool>& used, vector<vector<int>>& ans) {
+        if (temp.size() == nums.size()) {
             ans.push_back(temp);
             return;
-        } 
-        for(int i = 0; i < n; i++) {
-            if(vfs[i] == 0) {
-                temp.push_back(nums[i]);
-                vfs[i] = 1;
-                permuteNums(first + 1, vfs, nums, temp, ans);
-                temp.pop_back();
-                vfs[i] = 0;
-            }
+        }
+        for (int i = 0; i < nums.size(); ++i) {
+            if (used[i]) continue;
+            used[i] = true;
+            temp.push_back(nums[i]);
+            backtrack(nums, temp, used, ans);
+            temp.pop_back();
+            used[i] = false;
+        }
     }
 };
+
+
 // @lc code=end
-
-
 
 /*
 // @lcpr case=start
