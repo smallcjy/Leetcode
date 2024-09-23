@@ -16,6 +16,19 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+<<<<<<< HEAD
+=======
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+>>>>>>> e4a160f31c0dde34c05e8c35b413184c391120ba
 
 class Solution {
 public:
@@ -44,7 +57,10 @@ public:
         return dummy.next; // 哨兵节点的下一个节点就是新链表的头节点
     }
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4a160f31c0dde34c05e8c35b413184c391120ba
 // @lc code=end
 
 

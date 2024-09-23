@@ -6,7 +6,6 @@
  */
 
 
-
 // @lcpr-template-start
 using namespace std;
 #include <algorithm>
