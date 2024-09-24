@@ -5,25 +5,6 @@
  * [23] 合并 K 个升序链表
  */
 
-
-// @lcpr-template-start
-using namespace std;
-#include <algorithm>
-#include <array>
-#include <bitset>
-#include <climits>
-#include <deque>
-#include <functional>
-#include <iostream>
-#include <list>
-#include <queue>
-#include <stack>
-#include <tuple>
-#include <unordered_map>
-#include <unordered_set>
-#include <utility>
-#include <vector>
-// @lcpr-template-end
 // @lc code=start
 /**
  * Definition for singly-linked list.
@@ -35,6 +16,8 @@ using namespace std;
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+<<<<<<< HEAD
+=======
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -45,6 +28,7 @@ using namespace std;
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+>>>>>>> e4a160f31c0dde34c05e8c35b413184c391120ba
 
 class Solution {
 public:
@@ -73,6 +57,10 @@ public:
         return dummy.next; // 哨兵节点的下一个节点就是新链表的头节点
     }
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> e4a160f31c0dde34c05e8c35b413184c391120ba
 // @lc code=end
 
 
