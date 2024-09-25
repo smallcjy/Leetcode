@@ -29,11 +29,14 @@ class Solution {
 public:
     int jump(vector<int>& nums) {
         int jumps = 0, currentEnd = 0, farthest = 0;
+        //贪心算法，找到在上一次跳跃中可以跳到的最远的距离作为下一跳的落点，
+        //currentEnd是边界，表示边界内选择一个可以跳的最远的作为跳跃点。
         for (int i = 0; i < nums.size() - 1; ++i) {
             farthest = max(farthest, i + nums[i]);
             if (i == currentEnd) {
                 jumps++;
                 currentEnd = farthest;
+                std::cout<<currentEnd<<endl;
             }
         }
         return jumps;
